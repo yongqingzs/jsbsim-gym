@@ -11,10 +11,10 @@ policy_kwargs = dict(
 
 env = gym.make("JSBSim-v0")
 
-model = SAC.load("models/jsbsim_sac", env)
+model = SAC.load("models/jsbsim_sac_pre", env)  #jsbsim_sac_pre为预训练模型
 
-mp4_writer = iio.get_writer("video.mp4", format="ffmpeg", fps=30)
-gif_writer = iio.get_writer("video.gif", format="gif", fps=5)
+mp4_writer = iio.get_writer("./output/video.mp4", format="ffmpeg", fps=30)
+gif_writer = iio.get_writer("./output/video.gif", format="gif", fps=5)
 obs = env.reset()
 done = False
 step = 0

@@ -1,3 +1,5 @@
+setuptools==57.5.0
+pip==24.0
 numpy==1.26
 scipy
 matplotlib
@@ -10,3 +12,4 @@ tensorboard
 stable-baselines3==1.8
 imageio
 imageio-ffmpeg
+pymap3d

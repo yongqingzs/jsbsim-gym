@@ -131,10 +131,11 @@ dmypy.json
 # Custom Directories
 .vscode
 logs/
-models/
 
 # Custom File types
 *buffer.zip
 
 demo/output/*
 output/*
+models/*
+!models/jsbsim_sac_pre.zip

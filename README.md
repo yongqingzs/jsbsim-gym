@@ -5,6 +5,14 @@
 ## Installation
 
 Required libraries are provided in the `requirements.txt` and are tested for Python 3.9.7.
+```bash
+conda create -n jsbsim python=3.9.7
+conda activate jsbsim
+pip install setuptools==57.5.0
+pip install pip==24.0
+pip install wheel==0.38.0
+pip install -r requirements.txt
+```
 
 ## Usage
 

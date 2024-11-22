@@ -1,6 +1,6 @@
 import gym
-import jsbsim_gym.jsbsim_cc # This line makes sure the environment is registered
-from jsbsim_gym.jsbsim_cc import JSBSimEnvCC
+import jsbsim_gym.jsbsim_fixed_point # This line makes sure the environment is registered
+from jsbsim_gym.jsbsim_fixed_point import JSBSimEnvFixedPoint
 import imageio as iio
 from os import path
 from jsbsim_gym.features import JSBSimFeatureExtractor
@@ -12,7 +12,7 @@ policy_kwargs = dict(
 
 root_path = path.abspath(path.dirname(__file__)) + "/.."
 # env = gym.make("JSBSimCC-v0", root=root_path)
-env = JSBSimEnvCC(root=root_path)
+env = JSBSimEnvFixedPoint(root=root_path)
 
 model = SAC.load(root_path + "/models/jsbsim_sac_pre", env)  #jsbsim_sac_pre为预训练模型
 

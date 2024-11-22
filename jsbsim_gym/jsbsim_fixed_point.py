@@ -4,7 +4,7 @@ import gym
 import pymap3d
 from .jsbsim_gym import JSBSimEnv, PositionReward
 
-class JSBSimEnvCC(JSBSimEnv):
+class JSBSimEnvFixedPoint(JSBSimEnv):
     def __init__(self, root='.'):
         super().__init__(root)
     
@@ -55,11 +55,11 @@ class JSBSimEnvCC(JSBSimEnv):
     
 # Create entry point to wrapped environment
 def wrap_jsbsim(**kwargs):
-    return PositionReward(JSBSimEnvCC(**kwargs), 1e-2)
+    return PositionReward(JSBSimEnvFixedPoint(**kwargs), 1e-2)
 
 # Register the wrapped environment
 gym.register(
-    id="JSBSimCC-v0",
+    id="JSBSimEnvFixedPoint-v0",
     entry_point=wrap_jsbsim,
     max_episode_steps=1200
 )
